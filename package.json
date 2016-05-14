@@ -1,0 +1,38 @@
+{
+  "name": "inlinebot-moviescore",
+  "version": "0.0.1",
+  "description": "Movie score Inline bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inlinebot/inlinebot-moviescore.git"
+  },
+  "keywords": [
+    "line",
+    "bot",
+    "api",
+    "node",
+    "node.js",
+    "inline",
+    "sdk",
+    "example",
+    "movie",
+    "score"
+  ],
+  "author": "Rollables",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inlinebot/inlinebot-moviescore/issues"
+  },
+  "homepage": "https://github.com/inlinebot/inlinebot-moviescore",
+  "dependencies": {
+    "inline-sdk": "~0.0.3",
+    "superagent": "^1.8.3",
+    "superagent-promise": "^1.1.0"
+  },
+  "devDependencies": {}
+}
