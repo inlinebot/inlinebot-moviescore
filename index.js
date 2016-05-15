@@ -22,19 +22,13 @@ inline.onCommand((type, payload, context) => {
         return;
       }
 
-      // const multipleMessages = new MultipleMessages();
-
       const result = res.body.Title + ' (' + res.body.Year + ')' +
         '\nby ' + res.body.Director +
         '\nIMDB: ' + res.body.imdbRating +
         '\nTomato Meter: ' + res.body.tomatoMeter + '%' +
         '\nMetascore: ' + res.body.Metascore;
 
-      // multipleMessages
-      //   .addImage(res.body.Poster, res.body.Poster)
-      //   .addText(result);
-
-      // context.sendMultipleMessages(multipleMessages);
+      context.sendImage(res.body.Poster, res.body.Poster);
       context.sendText(result);
       return;
     })
