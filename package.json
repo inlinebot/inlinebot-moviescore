@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/inlinebot/inlinebot-moviescore",
   "dependencies": {
-    "inline-sdk": "~0.0.4",
+    "inline-sdk": "~0.0.5",
     "superagent": "^1.8.3",
     "superagent-promise": "^1.1.0"
   },
