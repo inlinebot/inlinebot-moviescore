@@ -10,7 +10,7 @@ const inline = new SDK();
 inline.onCommand((type, payload, context) => {
   if (type !== CommandType.MESSAGE) return;
 
-  const movieName = context.sendText(payload.args.join(' '));
+  const movieName = payload.args.join(' ');
 
   request
     .get('http://www.omdbapi.com/?tomatoes=true&t=' + movieName)
