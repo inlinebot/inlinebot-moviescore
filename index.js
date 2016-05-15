@@ -15,12 +15,14 @@ inline.onCommand((type, payload, context) => {
   request
     .get('http://www.omdbapi.com/?tomatoes=true&t=' + movieName)
     .then((res) => {
+      console.log(res.body);
+
       if (res.body.Response === 'False') {
         context.sendText(res.body.Error)
         return;
       }
 
-      const multipleMessages = new MultipleMessages();
+      // const multipleMessages = new MultipleMessages();
 
       const result = res.body.Title + ' (' + res.body.Year + ')' +
         '\nby ' + res.body.Director +
@@ -28,11 +30,15 @@ inline.onCommand((type, payload, context) => {
         '\nTomato Meter: ' + res.body.tomatoMeter + '%' +
         '\nMetascore: ' + res.body.Metascore;
 
-      multipleMessages
-        .addImage(res.body.Poster, res.body.Poster)
-        .addText(result);
+      // multipleMessages
+      //   .addImage(res.body.Poster, res.body.Poster)
+      //   .addText(result);
 
-      context.sendMultipleMessages(multipleMessages);
+      // context.sendMultipleMessages(multipleMessages);
+      context.sendText(result);
       return;
+    })
+    .catch((err) => {
+      console.error(err);
     });
 });
